@@ -1,1 +1,31 @@
 State Management => State ? data used by the application
+
+Solution to the issue of prop relaying , if we have a heirachal transfer of data format and we need to transfer data from level 4 to level 1 then level 2 and level 3 , get the data even when they dont need it , and if the level 3 is shifted somewhere else then we would need to burn the entire heirarchy 
+
+Centralised store :- to store the state 
+
+parent -> store -> child x
+
+Terms:-
+Action: wrap event or event + additional info, payload, plain object , event info deta h 
+
+Reducer: functions through which you can change your state via logic 
+
+Slice: app ke andar multiple features hote h, har ek feature ki state ko maintain karne ka logic Slice ke andar h, all reducer functions written here, initial state
+
+Store: Single source which has all the states
+
+State: Fancy name of data
+ 
+Life Cycle: 
+
+UI -> OnClick -> fires handleClick() -> Action Dispatched -> Store -> Reducer -> Logic Excecute -> Store -> State Update -> UI Update
+
+Button clicked -> Onclick fired -> associated function fired -> action dispatched -> Store -> Reducer to know logic of function -> logic executed -> Store -> State Update -> UI Update
+
+
+
+More NOTES:
+
+Predictable state container for javascript apps
+not tied to react
